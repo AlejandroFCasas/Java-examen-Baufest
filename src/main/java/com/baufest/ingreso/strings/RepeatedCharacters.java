@@ -13,6 +13,33 @@ public class RepeatedCharacters {
      */
     public Boolean isValid(String cadena) {
         //TODO: resolver
+    	int [][] arrayCadena= new int [1][cadena.length()];
+    	
+    	for (int i=0; i<cadena.length();i++) {
+    		
+    		arrayCadena[0][0]=cadena.charAt(i);
+    		arrayCadena[0][1]=arrayCadena[0][1]++;
+    		
+    		for (int j=0;j<cadena.length();j++) {
+ 
+    		if (cadena.charAt(j) == arrayCadena[j][0]) {
+    		int valor=arrayCadena[j][1];
+    		valor++;
+    			arrayCadena[j][1]=valor;//arrayCadena[j][1]++;
+    		}
+    		else {
+    			arrayCadena[j][0] = cadena.charAt(j);
+    			arrayCadena[j][1] = arrayCadena[j][1]+1;
+    			
+    			
+    		}
+    		}
+    		
+    	}
+    	
+    	
+    	
+    	
         throw new UnsupportedOperationException();
     }
 
