@@ -15,28 +15,40 @@ public class RepeatedCharacters {
         //TODO: resolver
     	int [][] arrayCadena= new int [1][cadena.length()];
     	
+		//flojo //
     	for (int i=0; i<cadena.length();i++) {
-    		
-    		arrayCadena[0][0]=cadena.charAt(i);
-    		arrayCadena[0][1]=arrayCadena[0][1]++;
-    		
-    		for (int j=0;j<cadena.length();j++) {
+    		for (int j=0;j<cadena.length();) { //es valido?
  
-    		if (cadena.charAt(j) == arrayCadena[j][0]) {
+    		if (cadena.charAt(i) == arrayCadena[j][0]) {
     		int valor=arrayCadena[j][1];
     		valor++;
-    			arrayCadena[j][1]=valor;//arrayCadena[j][1]++;
-    		}
-    		else {
-    			arrayCadena[j][0] = cadena.charAt(j);
-    			arrayCadena[j][1] = arrayCadena[j][1]+1;
-    			
-    			
-    		}
+    		arrayCadena[j][1]=valor;//arrayCadena[j][1]++;
+    		break;
+    		}else {
+    			arrayCadena[j][0]=cadena.charAt(i);
+    			arrayCadena[j][1]=arrayCadena[j][1]++;
+    			break;
+    		
+    		}	
     		}
     		
-    	}
+    		
+    		}
+    	//
     	
+    	//****
+    	for (int i=0; i<cadena.length();i++) {
+
+    		int count=0;
+    		for (int j=0; j<cadena.length();j++) {
+    			if (cadena.charAt(i) == cadena.charAt(j)) {
+    				count ++;
+    			}
+    		}
+    		arrayCadena[i][0]= cadena.charAt(i);
+    		arrayCadena[i][1]= count ;
+    	}
+    	//****
     	
     	
     	
