@@ -6,6 +6,11 @@ public class Jugador {
     private int puntuacion;
     private int perdidas;
 
+    //agrego el constructor por defecto
+    public Jugador() {
+
+}
+    
 	public Jugador(String nombre, int puntuacion) {
 			this.nombre = nombre;
 			this.puntuacion = puntuacion;

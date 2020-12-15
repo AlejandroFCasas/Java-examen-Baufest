@@ -23,6 +23,7 @@ public class RepeatedCharacters {
     		
     		for (int j=0; j<cadena.length();j++) {
     			
+    			//se crea un array con la letra y un valor de repeticiones
     			
     			if (arrayCadena[0][j]== 0 ) { //vacio
     				arrayCadena[0][j]= cadena.charAt(i); //se asigna la letra
@@ -70,12 +71,7 @@ public class RepeatedCharacters {
     	}
     	 
     	
-    	/*
-    	int count = 0;
-    	for (int i=0;i<cadena.length();i++) {
-    		count=count+(arrayCadena[1][i]);
-    	}
-    	*/
+
     	int min=0;
     	int max=0;
     	for (int i=0;i<cadena.length();i++) {
@@ -97,7 +93,7 @@ public class RepeatedCharacters {
     	
     	
     	
-        //throw new UnsupportedOperationException();
+        
     }
 
 }
